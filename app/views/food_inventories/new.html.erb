@@ -1,0 +1,20 @@
+<%= form_for @food_inventory do |f| %>
+  <div>
+    <%= f.label :food %>
+    <%= f.text_field :food %>
+  </div>
+
+  <div>
+    <%= f.label :description %>
+    <%= f.text_field :description %>
+  </div>
+
+  <div>
+    <%= f.label :quantity %>
+    <%= f.number_field :quantity %>
+  </div>
+
+
+  <%= f.submit 'Enter' %>
+
+  <% end %>
