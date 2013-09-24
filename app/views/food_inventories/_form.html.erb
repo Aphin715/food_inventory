@@ -1,0 +1,32 @@
+<%= form_for(@food_inventory) do |f| %>
+  <% if @food_inventory.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@food_inventory.errors.count, "error") %> You must specify Food, Description and Quantity</h2>
+
+      <ul>
+      <% @food_inventory.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div>
+    <%= f.label :food %>
+    <%= f.text_field :food %>
+  </div>
+
+  <div>
+    <%= f.label :description %>
+    <%= f.text_field :description %>
+  </div>
+
+  <div>
+    <%= f.label :quantity %>
+    <%= f.number_field :quantity %>
+  </div>
+
+
+  <%= f.submit 'Enter' %>
+
+  <% end %>

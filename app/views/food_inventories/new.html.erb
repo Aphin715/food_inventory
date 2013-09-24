@@ -1,20 +1,5 @@
-<%= form_for @food_inventory do |f| %>
-  <div>
-    <%= f.label :food %>
-    <%= f.text_field :food %>
-  </div>
+<h1>New Food</h1>
 
-  <div>
-    <%= f.label :description %>
-    <%= f.text_field :description %>
-  </div>
+<%= render 'form' %>
 
-  <div>
-    <%= f.label :quantity %>
-    <%= f.number_field :quantity %>
-  </div>
-
-
-  <%= f.submit 'Enter' %>
-
-  <% end %>
+<%= link_to 'Back', food_inventories_path %>
